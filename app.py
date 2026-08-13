@@ -1,0 +1,11 @@
+import streamlit as st
+
+st.title("My AI App")
+
+with st.sidebar:
+    st.header("Settings")
+    name = st.text_input("Enter your name")
+    mood = st.selectbox("What will your AI's mood be?", ["Happy", "Sad", "Angry", "Indifferent"])
+    creativity = st.slider("Creativity", 0.0, 1.0, 0.3)
+    if st.button("Save"):
+        st.write(f"Saved. Your name is {name}, your mood is {mood}, and your creativity is {creativity}")
